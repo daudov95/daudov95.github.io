@@ -107,7 +107,6 @@ $(function () {
 			if (mac && !isSafari) {
 				var mduration = "150%";
 			}else {
-				alert("true");
 				var mduration = "200%";
 			}
 			
