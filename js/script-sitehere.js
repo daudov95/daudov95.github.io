@@ -150,7 +150,7 @@ $(function () {
 			.fromTo(".block_info3 .block_info2_text", 1, {y: "500px"}, {y: "-495px",  delay: 0, ease:   Power3. easeOut})
 
 			if (mac && !isSafari) {
-				var tduration = "150%";
+				var tduration = "100%";
 			}else {
 				var tduration = "200%";
 			}
