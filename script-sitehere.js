@@ -104,14 +104,10 @@ $(function () {
 
 		// build scene
 
-			if (mac) {
-				if (isHrome) {
-					var mduration = "150%";
-				}else {
-					var mduration = "200%";
-				}
+			if (mac && !isSafari) {
+				var mduration = "150%";
 			}else {
-				mduration = "200%";
+				var mduration = "200%";
 			}
 			
 		var scene = new ScrollMagic.Scene(
