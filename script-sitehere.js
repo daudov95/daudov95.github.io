@@ -25,6 +25,7 @@ function test() {
 
   }else {
   	// alert("Windows");
+  	var isHrome = false;
   }
 }
 
