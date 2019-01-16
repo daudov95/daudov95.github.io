@@ -149,10 +149,15 @@ $(function () {
 	var wipeAnimation = new TimelineMax()
 			.fromTo(".block_info3 .block_info2_text", 1, {y: "500px"}, {y: "-495px",  delay: 0, ease:   Power3. easeOut})
 
+			if (mac && !isSafari) {
+				var tduration = "150%";
+			}else {
+				var tduration = "200%";
+			}
 	var scene = new ScrollMagic.Scene({
 					triggerElement: "#phone_animate",
 					triggerHook: "onLeave",
-					duration: "200%"
+					duration: tduration
 				})
 				.setPin("#section22")
 				.setTween(wipeAnimation)
