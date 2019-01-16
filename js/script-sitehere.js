@@ -133,10 +133,15 @@ $(function () {
 	var wipeAnimation = new TimelineMax()
 			.fromTo(".block_info3 .block_info3_phone", 1, {y: "500px"}, {y: "-144px",  delay: 0, ease:   Power3. easeOut})
 
+				if (mac && !isSafari) {
+				var tduration = "100%";
+				}else {
+					var tduration = "200%";
+				}
 	var scene = new ScrollMagic.Scene({
 					triggerElement: "#phone_animate",
 					triggerHook: "onLeave",
-					duration: "200%"
+					duration: tduration
 				})
 				.setPin("#section22")
 				.setTween(wipeAnimation)
@@ -150,14 +155,14 @@ $(function () {
 			.fromTo(".block_info3 .block_info2_text", 1, {y: "500px"}, {y: "-495px",  delay: 0, ease:   Power3. easeOut})
 
 			if (mac && !isSafari) {
-				var tduration = "100%";
+				var ttduration = "100%";
 			}else {
-				var tduration = "200%";
+				var ttduration = "200%";
 			}
 	var scene = new ScrollMagic.Scene({
 					triggerElement: "#phone_animate",
 					triggerHook: "onLeave",
-					duration: tduration
+					duration: ttduration
 				})
 				.setPin("#section22")
 				.setTween(wipeAnimation)
