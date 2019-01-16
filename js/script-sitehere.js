@@ -2,11 +2,10 @@ var mac = navigator.platform.match(/(Mac|iPhone|iPod|iPad)/i) ? true : false;
 var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
 
 
-
 function test() {
   if (mac) {
     // alert("MacOS");
-
+	var isHrome = false;
 	if (isSafari) { 
 	    $("#zerna_animate").css('top', '200px');
 	    $("#gift_animate").css('top', '1000px');
@@ -105,11 +104,12 @@ $(function () {
 
 		// build scene
 
-			if (isHrome) {
+			if (mac && !isSafari) {
 				var mduration = "150%";
 			}else {
 				var mduration = "200%";
 			}
+			
 		var scene = new ScrollMagic.Scene(
 						{triggerElement: "#monets_animate", 
 						duration: mduration, 
