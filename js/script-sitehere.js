@@ -133,11 +133,19 @@ $(function () {
 	var wipeAnimation = new TimelineMax()
 			.fromTo(".block_info3 .block_info3_phone", 1, {y: "500px"}, {y: "-144px",  delay: 0, ease:   Power3. easeOut})
 
-				if (mac && !isSafari) {
-				var tduration = "100%";
+
+			if (mac) {
+				if (!isSafari) {
+					// Other Browser
+					var tduration = "100%";
 				}else {
+					// Safari
 					var tduration = "200%";
 				}
+			}else {
+				// Windows browser
+				var tduration = "100%";
+			}
 	var scene = new ScrollMagic.Scene({
 					triggerElement: "#phone_animate",
 					triggerHook: "onLeave",
@@ -154,10 +162,17 @@ $(function () {
 	var wipeAnimation = new TimelineMax()
 			.fromTo(".block_info3 .block_info2_text", 1, {y: "500px"}, {y: "-495px",  delay: 0, ease:   Power3. easeOut})
 
-			if (mac && !isSafari) {
-				var ttduration = "100%";
+			if (mac) {
+				if (!isSafari) {
+					// Other Browser
+					var ttduration = "100%";
+				}else {
+					// Safari
+					var ttduration = "200%";
+				}
 			}else {
-				var ttduration = "200%";
+				// Windows browser
+				var ttduration = "100%";
 			}
 	var scene = new ScrollMagic.Scene({
 					triggerElement: "#phone_animate",
